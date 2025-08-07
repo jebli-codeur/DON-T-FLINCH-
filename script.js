@@ -46,7 +46,7 @@ const levels = [
             { x: 700, y: 240, width: 110, height: 15 }
         ],
         holes: [
-            { x: 0, y: 550-10, width: 900 }
+            { x: 0, y: 540, width: 900 }
         ],
         obstacles: []
     },
@@ -60,13 +60,13 @@ const levels = [
             { x: 700, y: 240, width: 110, height: 13 }
         ],
         holes: [
-            { x: 0, y: 550-10, width: 900 }
+            { x: 0, y: 540, width: 900 }
         ],
         obstacles: [
-            { x: 330, y: 397, radius: 13 }
+            { x: 330, y: 397, radius: 9 }
         ]
-     },
-    // Niveau 3 : plateformes petites, obstacles, piège ajusté (plus facile)
+    },
+    // Niveau 3 : plateformes petites, obstacles, piège ajusté (plus facile, obstacles plus petits)
     {
         platforms: [
             { x: 75,  y: 480, width: 55, height: 10 },
@@ -77,12 +77,11 @@ const levels = [
             { x: 780, y: 220, width: 70, height: 11 }
         ],
         holes: [
-            { x: 0, y: 550-10, width: 900 }
+            { x: 0, y: 540, width: 900 }
         ],
-        // Modification : 1 piège sur plateforme, 1 piège entre deux plateformes (évitable par saut)
         obstacles: [
-            { x: 335, y: 367, radius: 8 }, // Sur la 3e plateforme, décalé vers le bord gauche
-            { x: 420, y: 345, radius: 8 }  // Entre 3e et 4e plateforme, à éviter par un saut bien placé
+            { x: 335, y: 367, radius: 8 },
+            { x: 420, y: 345, radius: 9 }
         ]
     },
     // Niveau 4 : plateformes très espacées, plusieurs obstacles
@@ -95,12 +94,12 @@ const levels = [
             { x: 700, y: 240, width: 60, height: 10 }
         ],
         holes: [
-            { x: 0, y: 550-10, width: 900 }
+            { x: 0, y: 540, width: 900 }
         ],
         obstacles: [
-            { x: 250, y: 405, radius: 8 },
+            { x: 250, y: 405, radius: 9 },
             { x: 420, y: 345, radius: 8 },
-            { x: 600, y: 285, radius: 8 }
+            { x: 600, y: 285, radius: 10 }
         ]
     },
     // Niveau 5 : plateformes minuscules, pièges et récompense
@@ -115,16 +114,16 @@ const levels = [
             { x: 850, y: 180, width: 30, height: 8 }
         ],
         holes: [
-            { x: 0, y: 550-10, width: 900 }
+            { x: 0, y: 540, width: 900 }
         ],
         obstacles: [
-            { x: 220, y: 414, radius: 8 },
+            { x: 220, y: 414, radius: 7 },
             { x: 360, y: 365, radius: 8 },
             { x: 510, y: 312, radius: 8 },
-            { x: 665, y: 265, radius: 8 },
-            { x: 810, y: 213, radius: 8 }
+            { x: 665, y: 265, radius: 7 },
+            { x: 810, y: 213, radius: 7 }
         ],
-        reward: { x: 865, y: 155 } // Sucette ! 🍭
+        reward: { x: 865, y: 155 }
     }
 ];
 
@@ -137,7 +136,7 @@ let respawnBlink = 0;
 const boule = {
     x: BALL_INIT_X,
     y: BALL_INIT_Y,
-    radius: 20,
+    radius: 14, // Boule du joueur plus petite !
     color: "#d01b1b",
     dx: 0,
     dy: 0,
