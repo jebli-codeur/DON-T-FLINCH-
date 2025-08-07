@@ -65,8 +65,8 @@ const levels = [
         obstacles: [
             { x: 330, y: 397, radius: 13 }
         ]
-    },
-    // Niveau 3 : plateformes petites, obstacles, pièges
+     },
+    // Niveau 3 : plateformes petites, obstacles, piège ajusté (plus facile)
     {
         platforms: [
             { x: 75,  y: 480, width: 55, height: 10 },
@@ -79,9 +79,10 @@ const levels = [
         holes: [
             { x: 0, y: 550-10, width: 900 }
         ],
+        // Modification : 1 piège sur plateforme, 1 piège entre deux plateformes (évitable par saut)
         obstacles: [
-            { x: 367, y: 365, radius: 12 },
-            { x: 505, y: 312, radius: 13 }
+            { x: 335, y: 367, radius: 8 }, // Sur la 3e plateforme, décalé vers le bord gauche
+            { x: 420, y: 345, radius: 8 }  // Entre 3e et 4e plateforme, à éviter par un saut bien placé
         ]
     },
     // Niveau 4 : plateformes très espacées, plusieurs obstacles
@@ -97,9 +98,9 @@ const levels = [
             { x: 0, y: 550-10, width: 900 }
         ],
         obstacles: [
-            { x: 250, y: 405, radius: 13 },
-            { x: 420, y: 345, radius: 11 },
-            { x: 600, y: 285, radius: 14 }
+            { x: 250, y: 405, radius: 8 },
+            { x: 420, y: 345, radius: 8 },
+            { x: 600, y: 285, radius: 8 }
         ]
     },
     // Niveau 5 : plateformes minuscules, pièges et récompense
@@ -117,11 +118,11 @@ const levels = [
             { x: 0, y: 550-10, width: 900 }
         ],
         obstacles: [
-            { x: 220, y: 414, radius: 10 },
-            { x: 360, y: 365, radius: 11 },
-            { x: 510, y: 312, radius: 12 },
-            { x: 665, y: 265, radius: 10 },
-            { x: 810, y: 213, radius: 10 }
+            { x: 220, y: 414, radius: 8 },
+            { x: 360, y: 365, radius: 8 },
+            { x: 510, y: 312, radius: 8 },
+            { x: 665, y: 265, radius: 8 },
+            { x: 810, y: 213, radius: 8 }
         ],
         reward: { x: 865, y: 155 } // Sucette ! 🍭
     }
