@@ -37,91 +37,91 @@ if (isMobile()) {
 // Plateformes : plus de sol continu, parcours obligatoire
 const levels = [
     // Niveau 1 : simple escalier
-    {
-        platforms: [
-            { x: 50,  y: 480, width: 110, height: 15 },
-            { x: 200, y: 420, width: 100, height: 15 },
-            { x: 340, y: 360, width: 120, height: 15 },
-            { x: 530, y: 300, width: 110, height: 15 },
-            { x: 700, y: 240, width: 110, height: 15 }
+     {
+    platforms: [
+            { x: 50,  y: 480, width: 132, height: 18 },
+            { x: 200, y: 420, width: 120, height: 18 },
+            { x: 340, y: 360, width: 144, height: 18 },
+            { x: 530, y: 300, width: 132, height: 18 },
+            { x: 700, y: 240, width: 132, height: 18 }
         ],
         holes: [
             { x: 0, y: 540, width: 900 }
         ],
         obstacles: []
-    },
+   },
     // Niveau 2 : plateformes espacées, saut obligatoire
     {
-        platforms: [
-            { x: 80,  y: 460, width: 90, height: 13 },
-            { x: 250, y: 400, width: 80, height: 13 },
-            { x: 400, y: 350, width: 80, height: 12 },
-            { x: 560, y: 300, width: 80, height: 13 },
-            { x: 700, y: 240, width: 110, height: 13 }
+       platforms: [
+            { x: 80,  y: 460, width: 108, height: 16 },
+            { x: 250, y: 400, width: 96, height: 16 },
+            { x: 400, y: 350, width: 96, height: 14 },
+            { x: 560, y: 300, width: 96, height: 16 },
+            { x: 700, y: 240, width: 132, height: 16 }
         ],
         holes: [
             { x: 0, y: 540, width: 900 }
         ],
         obstacles: [
-            { x: 330, y: 397, radius: 9 }
+            { x: 330, y: 397, radius: 7 }
         ]
     },
     // Niveau 3 : plateformes petites, obstacles, piège ajusté (plus facile, obstacles plus petits)
     {
-        platforms: [
-            { x: 75,  y: 480, width: 55, height: 10 },
-            { x: 160, y: 420, width: 60, height: 10 },
-            { x: 300, y: 370, width: 70, height: 10 },
-            { x: 490, y: 320, width: 60, height: 10 },
-            { x: 650, y: 270, width: 80, height: 11 },
-            { x: 780, y: 220, width: 70, height: 11 }
+                  platforms: [
+            { x: 70,  y: 470, width: 60, height: 11 },
+            { x: 200, y: 410, width: 60, height: 11 },
+            { x: 370, y: 350, width: 60, height: 11 },
+            { x: 540, y: 290, width: 66, height: 11 },
+            { x: 700, y: 240, width: 72, height: 12 }
         ],
         holes: [
             { x: 0, y: 540, width: 900 }
         ],
         obstacles: [
-            { x: 335, y: 367, radius: 8 },
-            { x: 420, y: 345, radius: 9 }
+            { x: 250, y: 405, radius: 7 },
+            { x: 420, y: 345, radius: 6 },
+            { x: 600, y: 285, radius: 8 }
         ]
     },
     // Niveau 4 : plateformes très espacées, plusieurs obstacles
     {
-        platforms: [
-            { x: 70,  y: 470, width: 50, height: 9 },
-            { x: 200, y: 410, width: 50, height: 9 },
-            { x: 370, y: 350, width: 50, height: 9 },
-            { x: 540, y: 290, width: 55, height: 9 },
-            { x: 700, y: 240, width: 60, height: 10 }
+          platforms: [
+            { x: 70,  y: 470, width: 60, height: 11 },
+            { x: 200, y: 410, width: 60, height: 11 },
+            { x: 370, y: 350, width: 60, height: 11 },
+            { x: 540, y: 290, width: 66, height: 11 },
+            { x: 700, y: 240, width: 72, height: 12 }
         ],
         holes: [
             { x: 0, y: 540, width: 900 }
         ],
         obstacles: [
-            { x: 250, y: 405, radius: 9 },
-            { x: 420, y: 345, radius: 8 },
-            { x: 600, y: 285, radius: 10 }
+            { x: 250, y: 405, radius: 7 },
+            { x: 420, y: 345, radius: 6 },
+            { x: 600, y: 285, radius: 8 }
         ]
     },
     // Niveau 5 : plateformes minuscules, pièges et récompense
     {
-        platforms: [
-            { x: 60,  y: 480, width: 38, height: 8 },
-            { x: 170, y: 420, width: 36, height: 8 },
-            { x: 290, y: 370, width: 38, height: 8 },
-            { x: 430, y: 320, width: 36, height: 8 },
-            { x: 570, y: 270, width: 38, height: 8 },
-            { x: 730, y: 220, width: 40, height: 8 },
-            { x: 850, y: 180, width: 30, height: 8 }
+      platforms: [
+            { x: 60,  y: 480, width: 45, height: 10 },
+            { x: 170, y: 420, width: 43, height: 10 },
+            { x: 290, y: 370, width: 45, height: 10 },
+            { x: 430, y: 320, width: 43, height: 10 },
+            { x: 570, y: 270, width: 45, height: 10 },
+            { x: 730, y: 220, width: 48, height: 10 },
+            { x: 850, y: 180, width: 36, height: 10 }
         ],
         holes: [
             { x: 0, y: 540, width: 900 }
         ],
         obstacles: [
-            { x: 220, y: 414, radius: 7 },
-            { x: 360, y: 365, radius: 8 },
-            { x: 510, y: 312, radius: 8 },
-            { x: 665, y: 265, radius: 7 },
-            { x: 810, y: 213, radius: 7 }
+            { x: 220, y: 414, radius: 5 },
+            { x: 360, y: 365, radius: 6 },
+            { x: 510, y: 312, radius: 6 },
+            { x: 665, y: 265, radius: 5 },
+            { x: 810, y: 213, radius: 5 }
         ],
         reward: { x: 865, y: 155 }
     }
@@ -136,8 +136,8 @@ let respawnBlink = 0;
 const boule = {
     x: BALL_INIT_X,
     y: BALL_INIT_Y,
-    radius: 14, // Boule du joueur plus petite !
-    color: "#d01b1b",
+    radius: 12, // Boule du joueur plus petite !
+    color: "#1bbbd0ff",
     dx: 0,
     dy: 0,
     grounded: false,
