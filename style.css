@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #1e3c72, #2a5298, #56c6e6 90%);
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+h1 {
+    margin: 30px 0 10px 0;
+    font-size: 2.3rem;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 5px #112c46;
+}
+#ui {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+#controlMode {
+    font-size: 1.05rem;
+    padding: 7px 13px;
+    border-radius: 8px;
+    border: none;
+    background: #f1f1f1;
+    color: #193c72;
+    font-weight: 700;
+    outline: none;
+}
+#nextLevelBtn {
+    font-size: 1.1rem;
+    padding: 10px 22px;
+    border: none;
+    background: linear-gradient(90deg, #f9d423, #ff4e50);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 2px 12px #222a;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    font-weight: 700;
+}
+#nextLevelBtn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    color: #777;
+}
+#levelInfo {
+    font-size: 1.15rem;
+    background: rgba(0,0,0,0.2);
+    padding: 7px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+#message {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffe400;
+    text-shadow: 1px 1px 1px #444a;
+    min-width: 130px;
+}
+#victoryCount {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffadfa;
+    margin-left: 14px;
+}
+canvas {
+    display: block;
+    margin: 15px auto 0 auto;
+    border: 4px solid #fff;
+    border-radius: 18px;
+    background: linear-gradient(to bottom, #f4f7fa, #e3e6ed 80%);
+    box-shadow: 0 8px 32px #2349b6aa;
+    max-width: 98vw;
+}
+#touchControls {
+    display: none;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 12px;
+}
+#touchControls button {
+    font-size: 2.2rem;
+    padding: 16px 24px;
+    border-radius: 16px;
+    background: #eee;
+    border: 2px solid #444;
+    color: #222;
+    touch-action: manipulation;
+    box-shadow: 1px 2px 6px #2223;
+}
+@media (max-width: 900px) {
+    #touchControls { display: flex; }
+    canvas { max-width: 98vw; height: 60vw; max-height: 78vw; }
+    #ui { flex-direction: column; gap: 10px; }
+}
+
+/* Pop-up victoire */
+#popupVictory {
+    position: fixed;
+    top: 0; left: 0; right:0; bottom:0;
+    background: rgba(30,40,60,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+#popupVictory.hidden {
+    display: none;
+}
+.popup-content {
+    background: #fff;
+    color: #1e3c72;
+    padding: 32px 36px;
+    border-radius: 22px;
+    box-shadow: 0 4px 32px #334a;
+    text-align: center;
+}
+.popup-content h2 {
+    font-size: 2.1rem;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+.popup-content button {
+    margin-top: 18px;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border-radius: 13px;
+    border: none;
+    background: linear-gradient(90deg, #f9d423, #ff4e50);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Boule - LABOUBOULE</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>🎮 Bienvenue dans LABOUBOULE !</h1>
+    <div id="ui">
+        <select id="controlMode">
+            <option value="arrows">Contrôles : Flèches</option>
+            <option value="zqsd">Contrôles : ZQSD/AQSD</option>
+        </select>
+        <button id="nextLevelBtn" disabled>Suivant ⏭️</button>
+        <span id="levelInfo"></span>
+        <span id="message"></span>
+        <span id="victoryCount"></span>
+    </div>
+    <canvas id="gameCanvas" width="900" height="550"></canvas>
+    <div id="touchControls">
+      <button id="leftBtn" aria-label="Gauche">◀️</button>
+      <button id="jumpBtn" aria-label="Sauter">⏫</button>
+      <button id="rightBtn" aria-label="Droite">▶️</button>
+    </div>
+    <div id="popupVictory" class="hidden">
+      <div class="popup-content">
+        <h2>Bravo, tu as gagné ! 🍭</h2>
+        <p>Tu as fini tous les niveaux.</p>
+        <p>Nombre de victoires : <span id="victoryTotal">0</span></p>
+        <button id="restartBtn">Recommencer le jeu</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
